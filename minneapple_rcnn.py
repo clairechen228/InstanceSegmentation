@@ -148,7 +148,7 @@ def main():
     
     # Load Dataset
     train_data = AppleDataset(os.path.join(path_load,'train'), train = True)
-    test_data = AppleDataset(os.path.join(path_load,'validate'), train = False)
+    test_data = AppleDataset(os.path.join(path_load,'test'), train = False)
     train_dataloader = DataLoader(train_data, batch_size=batch_size_train, shuffle=True, collate_fn=utils.collate_fn)
     test_dataloader = DataLoader(test_data, batch_size=batch_size_test, shuffle=False, collate_fn=utils.collate_fn)
     
