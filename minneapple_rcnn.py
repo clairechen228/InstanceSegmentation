@@ -148,9 +148,9 @@ def main():
     
     # Load Dataset
     train_data = AppleDataset(os.path.join(path_load,'train'), train = True)
-    # test_data = AppleDataset(os.path.join(path_load,'validate'), train = False)
+    test_data = AppleDataset(os.path.join(path_load,'validate'), train = False)
     train_dataloader = DataLoader(train_data, batch_size=batch_size_train, shuffle=True, collate_fn=utils.collate_fn)
-    # test_dataloader = DataLoader(test_data, batch_size=batch_size_test, shuffle=False, collate_fn=utils.collate_fn)
+    test_dataloader = DataLoader(test_data, batch_size=batch_size_test, shuffle=False, collate_fn=utils.collate_fn)
     
     model = get_model_instance_segmentation(num_classes)
     model.to(device)
@@ -194,7 +194,7 @@ def main():
         writer.add_scalar('loss_rpn_box_reg/train', loss_dict['loss_rpn_box_reg'], epoch)
 
         # evaluate on the test dataset
-        # coco_evaluator = evaluate(model, test_dataloader, device=device)
+        coco_evaluator = evaluate(model, test_dataloader, device=device)
 
     writer.close()
     print('DONE')
