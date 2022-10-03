@@ -1,8 +1,9 @@
 # InstanceSegmentation
 
 ## Dataset
-The MinneApple data are downloaded from [here](https://rsn.umn.edu/projects/orchard-monitoring/minneapple#datadownload)
-The strawberry data are not provided. These are unlabeled data.
+The MinneApple data are downloaded from [here](https://rsn.umn.edu/projects/orchard-monitoring/minneapple#datadownload).
+
+The strawberry data are not provided and they are unlabeled data.
 
 ## Results
 ### Apple
