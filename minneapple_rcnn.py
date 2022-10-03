@@ -23,13 +23,12 @@ import transforms as tf
 
 ## Parameters
 batch_size_train = 5 #total 670
-# batch_size_test = 9
+batch_size_test = 9
 num_classes = 2 #background and apples
 num_epochs = 20
 # sep = -10 #number of validation images
-path_load = '/home/isleri/chen6242/Berry'
-path_save = '/home/isleri/chen6242/MaskRCNN_ver1/model/1001/after382'
-# path_output = '/home/isleri/chen6242/MaskRCNN_ver1/output'
+path_load = '/apple'
+path_save = '/results'
 
 
 #####################################
